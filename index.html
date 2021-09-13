@@ -180,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-10 00:00:53" itemprop="dateModified" datetime="2021-09-10T00:00:53+08:00">2021-09-10</time>
+                <time title="修改时间：2021-09-13 22:56:43" itemprop="dateModified" datetime="2021-09-13T22:56:43+08:00">2021-09-13</time>
               </span>
 
           
@@ -239,13 +239,13 @@
 <p>​     4]</p>
 <p>”Usually Upper letter for Matrix, lower letter for vector “</p>
 <h4 id="Addition-and-Scalar-Multiplication"><a href="#Addition-and-Scalar-Multiplication" class="headerlink" title="Addition and Scalar Multiplication"></a>Addition and Scalar Multiplication</h4><p>Matrix Addition: The dimensions of the matrixes must be identical.</p>
-<img src="C:/Users/佳成/iCloudDrive/Blog/Machine Learning/image-20210905221312927.png" alt="image-20210905221312927" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210912100255392.png" alt="image-20210912100255392" style="zoom: 50%;" />
 
 <p>Scalar (Real Number) Multiplication:</p>
 <img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210905221443315.png" alt="image-20210905221443315" style="zoom:33%;" />
 
 <p>Combination of Operands</p>
-<h4 id="Matrix-Vector-Multiplication"><a href="#Matrix-Vector-Multiplication" class="headerlink" title="Matrix Vector Multiplication:"></a>Matrix Vector Multiplication:</h4><img src="C:/Users/佳成/iCloudDrive/Blog/Machine Learning/image-20210905222025111.png" alt="image-20210905222025111" style="zoom:33%;" />
+<h4 id="Matrix-Vector-Multiplication"><a href="#Matrix-Vector-Multiplication" class="headerlink" title="Matrix Vector Multiplication:"></a>Matrix Vector Multiplication:</h4><img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210912100322729.png" alt="image-20210912100322729" style="zoom:50%;" />
 
 <img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210909235045531.png" alt="image-20210909235045531" style="zoom:33%;" />
 
@@ -264,7 +264,7 @@
 <li><p>Identity Matrix </p>
 <p>Denoted I or Inxn</p>
 <p>Examples:</p>
-<img src="C:/Users/佳成/iCloudDrive/Blog/Machine Learning/image-20210905225132131.png" alt="image-20210905225132131" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210912100350541.png" alt="image-20210912100350541" style="zoom:50%;" />
 
 <p>A x I = I x A!</p>
 </li>
@@ -277,7 +277,7 @@
 </li>
 </ul>
 <p>Matrix Transpose:</p>
-<img src="C:/Users/佳成/iCloudDrive/Blog/Machine Learning/image-20210905225753028.png" alt="image-20210905225753028" style="zoom:25%;" />
+<img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210912100408083.png" alt="image-20210912100408083" style="zoom: 50%;" />
 
 <ul>
 <li><p>Let A be an m x n matrix, and let B = AT</p>
@@ -310,11 +310,48 @@
 </ol>
 <p><strong>For Goal 1:</strong></p>
 <p>J(θ) should decrease after every iteration, use automatic converge test.</p>
-<img src="C:/Users/佳成/iCloudDrive/Blog/Machine Learning/image-20210909232440370.png" alt="image-20210909232440370" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/QikeLab/QikeLabPictures/master/Pictures/image-20210912100447532.png" alt="image-20210912100447532" style="zoom:50%;" />
 
 <p>Declare convergence if J decreases by less than 10^(-3) in one iteration.</p>
 <p>If gradient descent not working, use smaller α.</p>
 <p>For sufficiently small α, J should decrease on every iteration. But if α is too small, the convergence might be very slow.</p>
+<h3 id="Features-and-Polynomial-Regression"><a href="#Features-and-Polynomial-Regression" class="headerlink" title="Features and Polynomial Regression"></a>Features and Polynomial Regression</h3><p>Housing Prices Prediction:<br>$$<br>h_\theta=\theta_0+\theta_1<em>frontage+\theta_2</em>depth<br>$$<br>Polynomial Regression:<br>$$<br>h_\theta(x)=\theta_0+\theta_1<em>x+\theta_2</em>x^2<br>\h_\theta(x)=\theta_0+\theta_1<em>x+\theta_2</em>x^2+\theta_3*x^3<br>$$<br><img src="C:/Users/佳成/AppData/Roaming/Typora/typora-user-images/image-20210912185204275.png" alt="image-20210912185204275" style="zoom:33%;" /></p>
+<p>Choice of features:</p>
+<img src="C:/Users/佳成/AppData/Roaming/Typora/typora-user-images/image-20210912185332177.png" alt="image-20210912185332177" style="zoom:50%;" />
+
+<p>We can improve our features and the form of our hypothesis function in a couple of different ways.</p>
+<p>We can combine multiple features into one. For example, wen can combine x1 and x2 into  a new feature x3 by taking x1*x2.</p>
+<p>For Polynomial Regression, we can change the behavior of curve of your hypothesis function by making it quadratic, cubic or square root function and so on. <strong>If do so, the feature scaling is very important.</strong></p>
+<h3 id="Normal-Equation"><a href="#Normal-Equation" class="headerlink" title="Normal Equation"></a>Normal Equation</h3><img src="C:/Users/佳成/AppData/Roaming/Typora/typora-user-images/image-20210912225800945.png" alt="image-20210912225800945" style="zoom: 50%;" />
+
+
+<p>$$<br>m\ examples:(x^1,y^1),…,(x^m,y^m);\ n features.<br>\x^i=\left[<br>\begin{matrix}<br>x_0^i\<br>x_1^i\<br>x_3^i\<br>…\<br>x_n^i<br>\end{matrix}<br>\right]<br>\in R<br>$$</p>
+<p>$$<br>X(desgin\ matrix)=<br>\left[<br>\begin{matrix}<br>-(X^{(1)})^T\<br>-(X^{(2)})^T\<br>-(X^{(3)})^T\<br>…\<br>-(X^{(m)})^T\<br>\end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>\theta = (X^TX)^{-1}X^Ty<br>$$</p>
+<p>Comparison:</p>
+<ul>
+<li>Gradient Descent<ul>
+<li>Need to choose α</li>
+<li>Needs many iterations</li>
+<li>Works well even when n is large</li>
+</ul>
+</li>
+<li>Normal Equation<ul>
+<li>No need to choose α</li>
+<li>Don’t need to iterate</li>
+<li>Need to compute $(X^TX)^{-1}$</li>
+<li>Slow if n is very large. The complexity of computing the inversion is $O(n^3)$. So if the features are large, the normal equation will be slow. In practice, if the n exceeds 10000, it might be good to go to an iterative process.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Normal-Equation-Noninvertibility-optional"><a href="#Normal-Equation-Noninvertibility-optional" class="headerlink" title="Normal Equation Noninvertibility (optional)"></a>Normal Equation Noninvertibility (optional)</h3><p>If $X^TX$ is non-invertible (singular/degenerate), (this is rare), such as</p>
+<ul>
+<li>Redundant features (linearly dependent)</li>
+<li>Too many features (e.g. m&lt;=n)<ul>
+<li>delete some features, or use regularization</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
